@@ -29,6 +29,14 @@ stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-aw
 
 <h1 class="text-center mt-5">Liste des voiture</h1>
 
+<ul>
+    <?php 
+    foreach ($cars as $car) { ?>
+        <li><?php echo $car->getBrand() ?> <?php echo $car->getModel()?></li>
+    <?php }
+    ?>
+</ul>
+
     <!-- CONTENT END -->
 
     <!-- Bootstrap JS -->

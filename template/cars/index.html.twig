@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des voitures
+{% endblock %}
+
+{% block content %}
+<h1>Liste de voitures</h1>
+    <ul class="list-unstyled">
+        {% for car in cars %}
+            <li>
+                <a href="{{env.base_path ~ '/cars/' ~ car.id }}">
+                <a href="{{env.base_path}}/cars/{{car.id}}">
+                    {{ car.brand }} {{car.model }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+<button class"btn btn-primary"><a href="{{ env.base_path ~ '/cars' ~ '/new' }}">Ajouter une voiture</a></button>
+
+{% endblock %}
